@@ -1,4 +1,4 @@
-# Reasonable Contradiction - 合理的な矛盾
+# Reasonable contradiction - 合理的な矛盾
 
 本田圭介の以下の記事からインスパイアされて作った。
 
