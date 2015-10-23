@@ -15,7 +15,22 @@ window.onload = function() {
 
         this.image = core.assets['chara1.png'];
         this.moveBy = function(x, y, frame) {
-          this.tl.moveBy(x, y, frame);
+          this.tl.moveBy(x, y, frame)
+          .then(function(){
+//            var tweet = new TTweet(40, 98,TTweet.BOTTOM,TTweet.LEFT);
+            // var tweet = new TTweet(60, 30,TTweet.BOTTOM,TTweet.RIGHT);
+            var tweet = new TTweet(60, 130,TTweet.BOTTOM, TTweet.CENTER);
+            tweet.text("グー");
+            setTimeout(function() {
+              tweet.text("チョキ");
+              setTimeout(function() {
+                tweet.text("負けたー");
+              }, 3000);
+            }, 3000);
+            
+            core.rootScene.addChild(tweet);
+
+          });
         };
         core.rootScene.addChild(this);
       }
@@ -128,11 +143,6 @@ window.onload = function() {
 
     bear1.moveBy(90, 0, 80);
     bear2.moveBy(-90, 0, 80);
-
-    var tweet = new TTweet(128, 64,TTweet.BOTTOM,TTweet.LEFT);
-    tweet.text("ABCDEFG");
-    core.rootScene.addChild(tweet);
-
     // thanks to http://code.9leap.net/codes/show/16598
 
   }
